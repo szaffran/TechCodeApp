@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol protDelegate : NSObjectProtocol {
+    func funDelegate(text : String)
+}
 
-
-class AddUserPage: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class BookingViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    weak var myDelegate : protDelegate?
+    
+    
+    var myText = ""
     
     
 
@@ -23,8 +29,14 @@ class AddUserPage: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     let users : [User] = [User]()
     
+    var pickerHeigt = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        myDelegate!.funDelegate(text: "delegate working")
+        
+        companiesBox.text = myText
         
         self.containerView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.RawValue(UInt8(UIViewAutoresizing.flexibleWidth.rawValue) | UInt8(UIViewAutoresizing.flexibleHeight.rawValue)))
         
@@ -35,7 +47,10 @@ class AddUserPage: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSou
         self.scrollView.addSubview(self.containerView)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+   
+    
+  
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -50,7 +65,7 @@ class AddUserPage: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSou
 
 //        self.view.endEditing(true)
 
-        return "\(row)"
+        return "hello"
 
     }
 //

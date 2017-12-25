@@ -8,10 +8,24 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController , protDelegate {
+  
+    
+    @IBOutlet weak var txtViewLogin: UITextField!
+    
+    
+    
+    func funDelegate(text : String) {
+        txtViewLogin.text = text
+    }
+    
 
+    @IBOutlet weak var AuthenticateButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        AuthenticateButton.layer.cornerRadius = 10
+        AuthenticateButton.clipsToBounds = true
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +35,17 @@ class LoginViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func authenticateButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "managerLoginSegue", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if let addUserVC = segue.destination as? BookingViewController{
+            addUserVC.myDelegate = self
+            addUserVC.myText = "et voila le text que je veux afficher"
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

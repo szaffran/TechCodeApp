@@ -12,12 +12,15 @@
 		046FEB791FEFAA8800EF0872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB781FEFAA8800EF0872 /* Assets.xcassets */; };
 		046FEB7C1FEFAA8800EF0872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB7A1FEFAA8800EF0872 /* LaunchScreen.storyboard */; };
 		046FEB891FEFAB3D00EF0872 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */; };
-		046FEB8F1FEFABCE00EF0872 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB8E1FEFABCE00EF0872 /* User.swift */; };
+		046FEB8F1FEFABCE00EF0872 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB8E1FEFABCE00EF0872 /* Reservation.swift */; };
 		046FEB911FEFABE900EF0872 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB901FEFABE900EF0872 /* Room.swift */; };
-		046FEB941FEFD6ED00EF0872 /* AddUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB921FEFD6ED00EF0872 /* AddUserPage.swift */; };
-		046FEB951FEFD6ED00EF0872 /* AddUserPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB931FEFD6ED00EF0872 /* AddUserPage.xib */; };
+		046FEB941FEFD6ED00EF0872 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */; };
+		046FEB951FEFD6ED00EF0872 /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */; };
 		046FEB981FEFDACA00EF0872 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB961FEFDACA00EF0872 /* LoginViewController.swift */; };
 		046FEB991FEFDACA00EF0872 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB971FEFDACA00EF0872 /* LoginViewController.xib */; };
+		046FEB9B1FF0017300EF0872 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB9A1FF0017300EF0872 /* User.swift */; };
+		046FEB9D1FF0033200EF0872 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB9C1FF0033200EF0872 /* Company.swift */; };
+		04A2968F1FF1026D00BF9837 /* CompanyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2968E1FF1026D00BF9837 /* CompanyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +31,15 @@
 		046FEB7B1FEFAA8800EF0872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046FEB7D1FEFAA8800EF0872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		046FEB8E1FEFABCE00EF0872 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		046FEB8E1FEFABCE00EF0872 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		046FEB901FEFABE900EF0872 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		046FEB921FEFD6ED00EF0872 /* AddUserPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserPage.swift; sourceTree = "<group>"; };
-		046FEB931FEFD6ED00EF0872 /* AddUserPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddUserPage.xib; sourceTree = "<group>"; };
+		046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
 		046FEB961FEFDACA00EF0872 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		046FEB971FEFDACA00EF0872 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		046FEB9A1FF0017300EF0872 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		046FEB9C1FF0033200EF0872 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		04A2968E1FF1026D00BF9837 /* CompanyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +79,6 @@
 				046FEB781FEFAA8800EF0872 /* Assets.xcassets */,
 				046FEB7A1FEFAA8800EF0872 /* LaunchScreen.storyboard */,
 				046FEB7D1FEFAA8800EF0872 /* Info.plist */,
-				046FEB961FEFDACA00EF0872 /* LoginViewController.swift */,
-				046FEB971FEFDACA00EF0872 /* LoginViewController.xib */,
 			);
 			path = TechCodeApp;
 			sourceTree = "<group>";
@@ -82,8 +86,11 @@
 		046FEB831FEFAA9A00EF0872 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				046FEB8E1FEFABCE00EF0872 /* User.swift */,
+				046FEB8E1FEFABCE00EF0872 /* Reservation.swift */,
 				046FEB901FEFABE900EF0872 /* Room.swift */,
+				046FEB9A1FF0017300EF0872 /* User.swift */,
+				046FEB9C1FF0033200EF0872 /* Company.swift */,
+				04A2968E1FF1026D00BF9837 /* CompanyManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +98,8 @@
 		046FEB841FEFAAA100EF0872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				046FEB931FEFD6ED00EF0872 /* AddUserPage.xib */,
+				046FEB971FEFDACA00EF0872 /* LoginViewController.xib */,
+				046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */,
 				046FEB751FEFAA8800EF0872 /* Main.storyboard */,
 			);
 			path = Views;
@@ -100,7 +108,8 @@
 		046FEB851FEFAAB200EF0872 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				046FEB921FEFD6ED00EF0872 /* AddUserPage.swift */,
+				046FEB961FEFDACA00EF0872 /* LoginViewController.swift */,
+				046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */,
 				046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */,
 			);
 			path = Controllers;
@@ -167,7 +176,7 @@
 			files = (
 				046FEB991FEFDACA00EF0872 /* LoginViewController.xib in Resources */,
 				046FEB7C1FEFAA8800EF0872 /* LaunchScreen.storyboard in Resources */,
-				046FEB951FEFD6ED00EF0872 /* AddUserPage.xib in Resources */,
+				046FEB951FEFD6ED00EF0872 /* BookingViewController.xib in Resources */,
 				046FEB791FEFAA8800EF0872 /* Assets.xcassets in Resources */,
 				046FEB771FEFAA8800EF0872 /* Main.storyboard in Resources */,
 			);
@@ -180,12 +189,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A2968F1FF1026D00BF9837 /* CompanyManager.swift in Sources */,
 				046FEB981FEFDACA00EF0872 /* LoginViewController.swift in Sources */,
 				046FEB891FEFAB3D00EF0872 /* BaseViewController.swift in Sources */,
-				046FEB8F1FEFABCE00EF0872 /* User.swift in Sources */,
+				046FEB8F1FEFABCE00EF0872 /* Reservation.swift in Sources */,
 				046FEB721FEFAA8800EF0872 /* AppDelegate.swift in Sources */,
-				046FEB941FEFD6ED00EF0872 /* AddUserPage.swift in Sources */,
+				046FEB941FEFD6ED00EF0872 /* BookingViewController.swift in Sources */,
 				046FEB911FEFABE900EF0872 /* Room.swift in Sources */,
+				046FEB9B1FF0017300EF0872 /* User.swift in Sources */,
+				046FEB9D1FF0033200EF0872 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

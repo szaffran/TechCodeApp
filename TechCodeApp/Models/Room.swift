@@ -9,20 +9,25 @@
 import UIKit
 import Foundation
 
-struct Room {
-    var roomName : String = ""
-    var capacities : Int = 0
-    var facilities : [String] = []
+class Room
+{
+    var roomName : String
+    var capacities : Int
+    var roomNumber : Int
+    var floorNumber : Int
+    var facilities : [String]
     
     
-//    init(  roomName : String,  capacities : Int,  facilities : [String]   ){
-//
-//    }
-    
-    var listRoom : [Room]  {
-        return [ Room(roomName : "room1", capacities : 20, facilities : ["wifi","vc","tv","tel"]),
-                 Room(roomName : "room2", capacities : 30, facilities : ["wifi","vc","tv","tel"])
-        ]
+    init(  roomName : String,  capacities : Int,  facilities : [String] , roomNumber : Int, floorNumber : Int ){
+        self.roomName = roomName
+        self.capacities = capacities
+        self.roomNumber = roomNumber
+        self.floorNumber = floorNumber
+        self.facilities = facilities
     }
-
+    
+    static var listRoom : [Room]  {
+        return [ Room(roomName : "room1", capacities : 20, facilities : ["wifi","vc","tv","tel"], roomNumber : 201, floorNumber : 1), Room(roomName : "room2", capacities : 30, facilities : ["wifi","vc","tv","tel"], roomNumber : 201, floorNumber : 1)]
+    }
+ 
 }

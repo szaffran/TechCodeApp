@@ -1,5 +1,5 @@
 //
-//  Client.swift
+//  User.swift
 //  TechCodeApp
 //
 //  Created by Mac on 24/12/2017.
@@ -8,33 +8,31 @@
 
 import UIKit
 
-class User: NSObject {
-    enum status {
-        case admin
-        case client
-    }
-
-    var companyName : String
-    var userName : String
-    var email : String
-    var roomName : String
-    var time : Date
-    var date : Date
-    var autorisationStatus : status
-    
-    init(companyName : String,  userName : String,  email: String,  roomName: String, time: Date, date: Date, status : status )
-    {
-        self.companyName = companyName
-        self.userName = userName
-        self.email = email
-        self.roomName = roomName
-        self.time = time
-        self.date = date
-        self.autorisationStatus = status
-    }
-    
+enum status
+{
+    case member
+    case manager
+    case guest
 }
 
-
-
-
+class User: NSObject {
+    var id : Int
+    var name : String
+    var surname : String
+    var email : String
+    var phone : String
+    var company : Company
+    var status : status
+    
+    
+    init( id: Int,  name : String, surname : String,  email : String, phone : String, status : status, company : Company){
+        self.id = id
+        self.name = name
+        self.surname = surname
+        self.email = email
+        self.phone = phone
+        self.status = status
+        self.company = company
+        
+    }
+}
