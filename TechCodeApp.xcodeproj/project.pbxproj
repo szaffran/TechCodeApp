@@ -14,13 +14,18 @@
 		046FEB891FEFAB3D00EF0872 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */; };
 		046FEB8F1FEFABCE00EF0872 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB8E1FEFABCE00EF0872 /* Reservation.swift */; };
 		046FEB911FEFABE900EF0872 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB901FEFABE900EF0872 /* Room.swift */; };
-		046FEB941FEFD6ED00EF0872 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */; };
-		046FEB951FEFD6ED00EF0872 /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */; };
+		046FEB941FEFD6ED00EF0872 /* OldBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB921FEFD6ED00EF0872 /* OldBookingViewController.swift */; };
+		046FEB951FEFD6ED00EF0872 /* OldBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB931FEFD6ED00EF0872 /* OldBookingViewController.xib */; };
 		046FEB981FEFDACA00EF0872 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB961FEFDACA00EF0872 /* LoginViewController.swift */; };
 		046FEB991FEFDACA00EF0872 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB971FEFDACA00EF0872 /* LoginViewController.xib */; };
 		046FEB9B1FF0017300EF0872 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB9A1FF0017300EF0872 /* User.swift */; };
 		046FEB9D1FF0033200EF0872 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB9C1FF0033200EF0872 /* Company.swift */; };
 		04A2968F1FF1026D00BF9837 /* CompanyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2968E1FF1026D00BF9837 /* CompanyManager.swift */; };
+		04C9F8E81FF16EA9008B47B8 /* cell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9F8E61FF16EA9008B47B8 /* cell1.swift */; };
+		04C9F8E91FF16EA9008B47B8 /* cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C9F8E71FF16EA9008B47B8 /* cell1.xib */; };
+		04FE66721FF25C6500EFBEC2 /* BookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */; };
+		04FE66741FF2883900EFBEC2 /* ChooseRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */; };
+		04FE667A1FF2D25D00EFBEC2 /* BookingCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +38,18 @@
 		046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		046FEB8E1FEFABCE00EF0872 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		046FEB901FEFABE900EF0872 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
-		046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
+		046FEB921FEFD6ED00EF0872 /* OldBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldBookingViewController.swift; sourceTree = "<group>"; };
+		046FEB931FEFD6ED00EF0872 /* OldBookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OldBookingViewController.xib; sourceTree = "<group>"; };
 		046FEB961FEFDACA00EF0872 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		046FEB971FEFDACA00EF0872 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		046FEB9A1FF0017300EF0872 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		046FEB9C1FF0033200EF0872 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		04A2968E1FF1026D00BF9837 /* CompanyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManager.swift; sourceTree = "<group>"; };
+		04C9F8E61FF16EA9008B47B8 /* cell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell1.swift; sourceTree = "<group>"; };
+		04C9F8E71FF16EA9008B47B8 /* cell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cell1.xib; sourceTree = "<group>"; };
+		04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewController.swift; sourceTree = "<group>"; };
+		04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoomViewController.swift; sourceTree = "<group>"; };
+		04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCalendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 				046FEB9A1FF0017300EF0872 /* User.swift */,
 				046FEB9C1FF0033200EF0872 /* Company.swift */,
 				04A2968E1FF1026D00BF9837 /* CompanyManager.swift */,
+				04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,8 +109,9 @@
 		046FEB841FEFAAA100EF0872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04C9F8E71FF16EA9008B47B8 /* cell1.xib */,
 				046FEB971FEFDACA00EF0872 /* LoginViewController.xib */,
-				046FEB931FEFD6ED00EF0872 /* BookingViewController.xib */,
+				046FEB931FEFD6ED00EF0872 /* OldBookingViewController.xib */,
 				046FEB751FEFAA8800EF0872 /* Main.storyboard */,
 			);
 			path = Views;
@@ -108,9 +120,12 @@
 		046FEB851FEFAAB200EF0872 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */,
 				046FEB961FEFDACA00EF0872 /* LoginViewController.swift */,
-				046FEB921FEFD6ED00EF0872 /* BookingViewController.swift */,
+				046FEB921FEFD6ED00EF0872 /* OldBookingViewController.swift */,
 				046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */,
+				04C9F8E61FF16EA9008B47B8 /* cell1.swift */,
+				04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,7 +162,7 @@
 				TargetAttributes = {
 					046FEB6D1FEFAA8800EF0872 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -176,7 +191,8 @@
 			files = (
 				046FEB991FEFDACA00EF0872 /* LoginViewController.xib in Resources */,
 				046FEB7C1FEFAA8800EF0872 /* LaunchScreen.storyboard in Resources */,
-				046FEB951FEFD6ED00EF0872 /* BookingViewController.xib in Resources */,
+				04C9F8E91FF16EA9008B47B8 /* cell1.xib in Resources */,
+				046FEB951FEFD6ED00EF0872 /* OldBookingViewController.xib in Resources */,
 				046FEB791FEFAA8800EF0872 /* Assets.xcassets in Resources */,
 				046FEB771FEFAA8800EF0872 /* Main.storyboard in Resources */,
 			);
@@ -190,11 +206,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A2968F1FF1026D00BF9837 /* CompanyManager.swift in Sources */,
+				04C9F8E81FF16EA9008B47B8 /* cell1.swift in Sources */,
 				046FEB981FEFDACA00EF0872 /* LoginViewController.swift in Sources */,
+				04FE66721FF25C6500EFBEC2 /* BookingTableViewController.swift in Sources */,
+				04FE667A1FF2D25D00EFBEC2 /* BookingCalendar.swift in Sources */,
 				046FEB891FEFAB3D00EF0872 /* BaseViewController.swift in Sources */,
 				046FEB8F1FEFABCE00EF0872 /* Reservation.swift in Sources */,
+				04FE66741FF2883900EFBEC2 /* ChooseRoomViewController.swift in Sources */,
 				046FEB721FEFAA8800EF0872 /* AppDelegate.swift in Sources */,
-				046FEB941FEFD6ED00EF0872 /* BookingViewController.swift in Sources */,
+				046FEB941FEFD6ED00EF0872 /* OldBookingViewController.swift in Sources */,
 				046FEB911FEFABE900EF0872 /* Room.swift in Sources */,
 				046FEB9B1FF0017300EF0872 /* User.swift in Sources */,
 				046FEB9D1FF0033200EF0872 /* Company.swift in Sources */,
@@ -334,11 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TechCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "developers-institute.TechCodeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,11 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TechCodeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "developers-institute.TechCodeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

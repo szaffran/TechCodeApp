@@ -36,15 +36,16 @@ class LoginViewController: BaseViewController , protDelegate {
     }
     
     @IBAction func authenticateButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "managerLoginSegue", sender: nil)
+        performSegue(withIdentifier: "bookingSegue", sender: nil)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if let addUserVC = segue.destination as? BookingViewController{
-            addUserVC.myDelegate = self
-            addUserVC.myText = "et voila le text que je veux afficher"
-            
-        }
-    }
+    
+ //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       if let addUserVC = segue.destination as? OldBookingViewController{
+//            addUserVC.myDelegate = self
+//            addUserVC.myText = "et voila le text que je veux afficher"
+//
+//        }
+//    }
     
     /*
     // MARK: - Navigation

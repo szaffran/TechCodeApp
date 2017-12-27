@@ -12,7 +12,7 @@ protocol protDelegate : NSObjectProtocol {
     func funDelegate(text : String)
 }
 
-class BookingViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class OldBookingViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     weak var myDelegate : protDelegate?
     

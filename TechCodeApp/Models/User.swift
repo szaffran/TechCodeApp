@@ -8,31 +8,19 @@
 
 import UIKit
 
-enum status
-{
-    case member
-    case manager
-    case guest
-}
+
 
 class User: NSObject {
-    var id : Int
     var name : String
-    var surname : String
     var email : String
     var phone : String
     var company : Company
-    var status : status
     
-    
-    init( id: Int,  name : String, surname : String,  email : String, phone : String, status : status, company : Company){
-        self.id = id
+    init( name : String,  email : String, phone : String, company : Company){
+       
         self.name = name
-        self.surname = surname
         self.email = email
         self.phone = phone
-        self.status = status
         self.company = company
-        
     }
 }
