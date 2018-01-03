@@ -17,6 +17,10 @@ class Room
     var roomNumber : Int
     var floorNumber : Int
     var facilities : [String]
+    var bookingCal :  [String: [Bool]]? = nil
+    
+    
+    
     
     
     init(  roomName : String,  capacities : Int,  facilities : [String] , roomNumber : Int, floorNumber : Int, image : UIImage? ){
@@ -28,8 +32,5 @@ class Room
         self.image = image
     }
     
-    static var listRoom : [Room]  {
-        return [ Room(roomName : "room1", capacities : 20, facilities : ["wifi","vc","tv","tel"], roomNumber : 201, floorNumber : 1, image: UIImage(named: "photo1")), Room(roomName : "room2", capacities : 30, facilities : ["wifi","vc","tv","tel"], roomNumber : 202, floorNumber : 1,image: UIImage(named : "photo2")), Room(roomName : "room3", capacities : 10, facilities : ["wifi","vc","tv","tel"], roomNumber : 203, floorNumber : 1, image : UIImage(named : "photo3"))]
-    }
  
 }

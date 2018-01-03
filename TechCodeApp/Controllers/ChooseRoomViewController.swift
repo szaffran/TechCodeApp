@@ -11,24 +11,41 @@ import UIKit
 class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    var date : String?
+    var startTime: String?
+    var endTime: String?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-          self.tableView.register(UINib(nibName: "cell1", bundle: Bundle.main), forCellReuseIdentifier: "myCell")
+          self.tableView.register(UINib(nibName: "Cell1", bundle: Bundle.main), forCellReuseIdentifier: "myCell")
        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell : cell1 = (tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? cell1)!
-        cell.fillRoom(room : Room.listRoom[indexPath.row])
+        
+        let cell : Cell1 = (tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? Cell1)!
+        
+        cell.fillRoom(room : ListsOfObjects.listRoom[indexPath.row])
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let selectedRow = ListsOfObjects.listRoom[indexPath.row]
+        
+        performSegue(withIdentifier: "confirmationSegue", sender: selectedRow)
+        
+        
+        
     }
 
      func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +55,19 @@ class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableVi
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return ListsOfObjects.listRoom.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let confirmationVC: ConfirmationReservationViewController = segue.destination as? ConfirmationReservationViewController {
+            
+            confirmationVC.selectedRoom = sender as? Room
+            confirmationVC.date = self.date
+            confirmationVC.startTime = self.startTime
+            confirmationVC.endTime = self.endTime
+        }
+            
+        
     }
 
   

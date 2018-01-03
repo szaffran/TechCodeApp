@@ -220,13 +220,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="End time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akH-PY-cQZ">
-                                                    <rect key="frame" x="40" y="12.5" width="75.5" height="20.5"/>
+                                                    <rect key="frame" x="40" y="12" width="75.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqP-op-4pQ">
-                                                    <rect key="frame" x="293" y="12" width="42" height="21"/>
+                                                    <rect key="frame" x="293" y="12.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -342,11 +342,27 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="g87-NN-gPa" id="1yn-A5-K85"/>
+                        <segue destination="UrY-fE-wyB" kind="show" identifier="confirmationSegue" id="Mz4-KG-ugb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf3-X3-bUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="-1946.176911544228"/>
+        </scene>
+        <!--Confirmation Reservation View Controller-->
+        <scene sceneID="kx1-7w-yeJ">
+            <objects>
+                <viewController id="UrY-fE-wyB" customClass="ConfirmationReservationViewController" customModule="TechCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Pz-Lj-Yxn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AJf-qd-j1u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmL-Cq-FYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="-1945"/>
         </scene>
         <!--Old Booking View Controller-->
         <scene sceneID="a7U-tM-d9c">

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class cell1: UITableViewCell {
+class Cell1: UITableViewCell {
 
    
     
@@ -16,10 +16,12 @@ class cell1: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var surname: UILabel!
     
+    
     func fillRoom(room : Room){
         self.img.image = room.image
         self.name.text = room.roomName
         self.surname.text = String(room.roomNumber)
     }
+   
     
 }
