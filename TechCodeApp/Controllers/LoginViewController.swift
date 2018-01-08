@@ -14,29 +14,37 @@ class LoginViewController: BaseViewController , protDelegate {
     @IBOutlet weak var txtViewLogin: UITextField!
     
     
-    
     func funDelegate(text : String) {
         txtViewLogin.text = text
     }
     
 
     @IBOutlet weak var AuthenticateButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthenticateButton.layer.cornerRadius = 10
         AuthenticateButton.clipsToBounds = true
         
-
-        // Do any additional setup after loading the view.
+        
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func authenticateButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "bookingSegue", sender: nil)
+        
+        
+      // performSegue(withIdentifier: "bookingSegue", sender: nil)
+        performSegue(withIdentifier: "managerLoginSegue", sender: nil)
+        
+        
+        
+        
+        
+        
     }
     
  //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

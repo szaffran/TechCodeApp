@@ -18,7 +18,7 @@ class Room
     var floorNumber : Int
     var facilities : [String]
     var bookingCal :  [String: [Bool]]? = nil
-    
+    var reservations : [Reservation] = []
     
     
     

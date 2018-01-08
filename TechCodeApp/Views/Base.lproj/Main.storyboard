@@ -212,21 +212,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Y4H-5r-sWw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Y4H-5r-sWw">
                                         <rect key="frame" x="0.0" y="679" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y4H-5r-sWw" id="2u1-6J-QQh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="End time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akH-PY-cQZ">
-                                                    <rect key="frame" x="40" y="12" width="75.5" height="20.5"/>
+                                                    <rect key="frame" x="40" y="12.5" width="75.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqP-op-4pQ">
-                                                    <rect key="frame" x="293" y="12.5" width="42" height="21"/>
+                                                    <rect key="frame" x="293" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -253,6 +253,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="535975793.23727798">
                                                         <!--2017-12-26 10:09:53 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="kdc-px-lsP" eventType="valueChanged" id="VZu-BT-tlG"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -364,20 +367,26 @@
             </objects>
             <point key="canvasLocation" x="666" y="-1945"/>
         </scene>
-        <!--Old Booking View Controller-->
+        <!--Reservation Booking View Controller-->
         <scene sceneID="a7U-tM-d9c">
             <objects>
-                <viewController id="gOa-S1-tid" customClass="OldBookingViewController" customModule="TechCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gOa-S1-tid" customClass="ReservationBookingViewController" customModule="TechCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ATS-he-jSD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LP6-8K-Jxq"/>
                     </view>
+                    <connections>
+                        <segue destination="G7s-gY-tzr" kind="show" identifier="chooseRoomSegue2" id="FQo-Fx-DG5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1U-uk-ZXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-870" y="-2643"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FQo-Fx-DG5"/>
+    </inferredMetricsTieBreakers>
 </document>

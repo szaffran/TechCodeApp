@@ -44,8 +44,6 @@ class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableVi
         
         performSegue(withIdentifier: "confirmationSegue", sender: selectedRow)
         
-        
-        
     }
 
      func numberOfSections(in tableView: UITableView) -> Int {
