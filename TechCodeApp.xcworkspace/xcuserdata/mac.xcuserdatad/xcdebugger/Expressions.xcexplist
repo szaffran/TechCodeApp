@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in CompanyManager.getReservationFromFirebase():CompanyManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.handleLogin():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CompanyManager.sharedInstance">
+            </PersistentString>
+            <PersistentString
+               value = "CompanyManager.sharedInstance.company!.id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReservationBookingViewController.pickerView(_:didSelectRow:inComponent:):ReservationBookingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "components.date!">
+            </PersistentString>
+            <PersistentString
+               value = "components.hour">
+            </PersistentString>
+            <PersistentString
+               value = "date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ChooseRoomViewController.prepare(for:sender:):ChooseRoomViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReservationBookingViewController.editPickerInit():ReservationBookingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.endPicker.selectedRow(inComponent: 0)">
+            </PersistentString>
+            <PersistentString
+               value = "self.picker.selectedRow(inComponent: 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReservationList.viewWillAppear(_:):ReservationList.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CompanyManager.sharedInstance.company!.getReservations()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConfirmationReservationViewController.confirm(_:):ConfirmationReservationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " CompanyManager.sharedInstance.company?.reservations">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.authenticateButtonTapped(_:):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ReservationManager.sharedInstance.reservations">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Reservation.getRoomById(id:):Reservation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "RoomManager.sharedInstance.rooms">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReservationBookingViewController.viewDidLoad():ReservationBookingViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RoomManager.getRoomsFromFirebase(completion:):RoomManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item.value as! Dictionary&lt;String, Any&gt;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.getReservationFromFirebase():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CompanyManager.sharedInstance.company.id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static MockObjects.fillReservationsForListRoom():MockObjects.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "MockObjects.listCompany">
+            </PersistentString>
+            <PersistentString
+               value = "index % 2">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Reservation.init(dict:):Reservation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;\(sharedDateStr) \(checkInStr)&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
