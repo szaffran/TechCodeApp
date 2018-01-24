@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 enum status
 {
     case Company
@@ -15,27 +17,34 @@ enum status
 
 class Company: NSObject
 {
-    var login : String = ""
-    var password : String = ""
-    var id : Int
+   var login : String = ""
+   var password : String = ""
+    var id : String
     var name : String
     var responsibleName: String
     var email : String
     var phone : String
     var workforce : Int
     var status : status
+    var reservations : [Reservation] = []
+    //var ref: DatabaseReference?
+    //var key: String!
     
     override init(){
-        self.id = 0
+        self.id = ""
         self.name = ""
         self.responsibleName = ""
         self.email = ""
         self.phone = ""
         self.workforce = 0
         self.status = .Company
+        
     }
+
     
-    init( id : Int, name : String, responsibleName : String,  email : String, phone : String, workforce: Int, status : status){
+    init( login : String, password : String, id : String, name : String, responsibleName : String,  email : String, phone : String, workforce: Int, status : status){
+        self.login = login
+        self.password = password
         self.id = id
         self.name = name
         self.responsibleName = responsibleName
@@ -44,6 +53,36 @@ class Company: NSObject
         self.workforce = workforce
         self.status = status
     }
+    
+    func addReservation(reservation : Reservation){
+        reservations.append(reservation)
+        reservation.updateDataBase(to: .company)
+    }
+    func updateReservation(reservation : Reservation, index : Int){
+        reservations[index] = reservation
+    }
+    func getReservations() -> [Reservation]{
+        return self.reservations
+    }
+    func updateDataBase()
+    {
+        //get reference to database
+        let ref = Database.database().reference(fromURL: "https://techcode-1.firebaseio.com/")
+
+        //update
+        let companyReference = ref.child("companys").child(CompanyManager.sharedInstance.company!.id )
+
+        let company = ["name" : name, "responsibleName" : responsibleName, "phone" : phone, "workforce" : workforce, "id" : id] as [String : Any]
+
+        companyReference.updateChildValues(company, withCompletionBlock:{(err,ref) in
+            if err != nil
+            {
+                return
+            }
+        })
+    }
+    
+    
     
 }
 

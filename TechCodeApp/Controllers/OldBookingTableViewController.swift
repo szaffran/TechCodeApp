@@ -15,26 +15,15 @@ class BookingTableViewController: UITableViewController {
         
         updateDateViews()
         
-        //        let date = Date()
-        //let calendar = Calendar.current
-        //
-        //
-        //        let currentTime = calendar.dateComponents([.hour, .minute], from: date)
-        //        let currentDate = calendar.dateComponents([.day, .month, .year], from: date)
-        //
-        //
+     
         let currentDate = Date()
-        //
         self.datePicker.minimumDate = currentDate
         
         self.startTimeDatePicker.date = currentDate
         self.startTimeDatePicker.minimumDate = currentDate
         
         self.endTimeDatePicker.minimumDate = currentDate
-        
-        //                updateDateViews()
-        //        updateNumberOfGuests()
-        //        updateRoomType()
+    
     }
     
     

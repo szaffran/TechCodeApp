@@ -10,7 +10,8 @@ import UIKit
 
 
 
-class User: NSObject {
+class User: NSObject
+{
     var name : String
     var email : String
     var phone : String

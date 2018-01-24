@@ -55,5 +55,9 @@ class BaseViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func menu(_ sender: Any)
+    {
+        self.viewDeckController?.open(.left, animated: true)
+    }
+    
 }

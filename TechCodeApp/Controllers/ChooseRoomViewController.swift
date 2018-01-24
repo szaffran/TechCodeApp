@@ -8,27 +8,44 @@
 
 import UIKit
 
-class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChooseRoomViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+     weak var updateReservationDelegate : UpdateReservationProtocol?
     var date : String?
     var startTime: String?
     var endTime: String?
+    var reservation : Reservation = Reservation()
+    var unoccupedRooms : [Room] = []
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-          self.tableView.register(UINib(nibName: "Cell1", bundle: Bundle.main), forCellReuseIdentifier: "myCell")
-       
+        
+        
+        getUnoccupedRooms()
+        self.tableView.register(UINib(nibName: "Cell1", bundle: Bundle.main), forCellReuseIdentifier: "myCell")
     }
+    
+    func getUnoccupedRooms(){
+        
+       // MockObjects.fillReservationsForListRoom()
+        
+        for room in RoomManager.sharedInstance.rooms{
+            if(room.occupiedRoom(newReservation: reservation)){
+                unoccupedRooms.append(room)
+            }
+        }
+    }
+   
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : Cell1 = (tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? Cell1)!
         
-        cell.fillRoom(room : ListsOfObjects.listRoom[indexPath.row])
+        cell.fillRoom(room : unoccupedRooms[indexPath.row])
         
         return cell
     }
@@ -40,7 +57,7 @@ class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let selectedRow = ListsOfObjects.listRoom[indexPath.row]
+        let selectedRow = RoomManager.sharedInstance.rooms[indexPath.row]
         
         performSegue(withIdentifier: "confirmationSegue", sender: selectedRow)
         
@@ -53,22 +70,24 @@ class ChooseRoomViewController: UIViewController, UITableViewDelegate, UITableVi
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ListsOfObjects.listRoom.count
+        return unoccupedRooms.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let confirmationVC: ConfirmationReservationViewController = segue.destination as? ConfirmationReservationViewController {
-            
-            confirmationVC.selectedRoom = sender as? Room
-            confirmationVC.date = self.date
-            confirmationVC.startTime = self.startTime
-            confirmationVC.endTime = self.endTime
+            reservation.room = sender as! Room
+            reservation.roomId = reservation.room.roomId
+            confirmationVC.reservation = self.reservation
+            confirmationVC.updateReservationDelegate = self.updateReservationDelegate
         }
-            
-        
     }
 
-  
+    @IBAction func back(_ sender: Any) {
+        //self.dismiss
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

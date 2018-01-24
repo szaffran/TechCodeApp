@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0428535020177AF1000B8382 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428534F20177AF1000B8382 /* RoomManager.swift */; };
+		04306EB32013D6510038395C /* LogOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04306EB22013D6510038395C /* LogOut.storyboard */; };
+		04306EB52013D8460038395C /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04306EB42013D8460038395C /* LogOutViewController.swift */; };
+		0452B62F200B83B40090764D /* ReservationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B62D200B83B40090764D /* ReservationList.swift */; };
+		0452B630200B83B40090764D /* ReservationList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0452B62E200B83B40090764D /* ReservationList.xib */; };
+		0452B632200B89FE0090764D /* ReservationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B631200B89FE0090764D /* ReservationManager.swift */; };
+		0452B635200C6DF00090764D /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B633200C6DF00090764D /* ReservationCell.swift */; };
+		0452B636200C6DF00090764D /* ReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0452B634200C6DF00090764D /* ReservationCell.xib */; };
 		046FEB721FEFAA8800EF0872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FEB711FEFAA8800EF0872 /* AppDelegate.swift */; };
 		046FEB771FEFAA8800EF0872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB751FEFAA8800EF0872 /* Main.storyboard */; };
 		046FEB791FEFAA8800EF0872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046FEB781FEFAA8800EF0872 /* Assets.xcassets */; };
@@ -27,18 +35,34 @@
 		04FD634020022BB600490437 /* ReservationBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD633E20022BB600490437 /* ReservationBookingViewController.swift */; };
 		04FD634120022BB600490437 /* ReservationBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD633F20022BB600490437 /* ReservationBookingViewController.xib */; };
 		04FD634320024E9C00490437 /* ReservationScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD634220024E9C00490437 /* ReservationScrollView.swift */; };
-		04FE66721FF25C6500EFBEC2 /* BookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */; };
+		04FD634520049DB900490437 /* MockObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD634420049DB900490437 /* MockObjects.swift */; };
+		04FD63472004E54000490437 /* ChooseRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD63462004E54000490437 /* ChooseRoomViewController.xib */; };
+		04FE653C2007657B00BE5145 /* menuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04FE653B2007657B00BE5145 /* menuList.plist */; };
+		04FE653F200B4DD800BE5145 /* ShownMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE653E200B4DD800BE5145 /* ShownMenuVC.swift */; };
+		04FE6542200B4EC900BE5145 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6540200B4EC900BE5145 /* MenuViewController.swift */; };
+		04FE6543200B4EC900BE5145 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6541200B4EC900BE5145 /* MenuViewController.xib */; };
+		04FE6546200B59CC00BE5145 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6545200B59CC00BE5145 /* MenuItem.swift */; };
+		04FE6548200B5D0300BE5145 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6547200B5D0300BE5145 /* Menu.storyboard */; };
+		04FE654A200B5D2E00BE5145 /* Creation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE6549200B5D2E00BE5145 /* Creation.storyboard */; };
+		04FE654C200B5D3E00BE5145 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE654B200B5D3E00BE5145 /* List.storyboard */; };
+		04FE66721FF25C6500EFBEC2 /* OldBookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66711FF25C6500EFBEC2 /* OldBookingTableViewController.swift */; };
 		04FE66741FF2883900EFBEC2 /* ChooseRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */; };
-		04FE667A1FF2D25D00EFBEC2 /* BookingCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */; };
 		04FE667C1FF3C1DA00EFBEC2 /* ConfirmationReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE667B1FF3C1DA00EFBEC2 /* ConfirmationReservationViewController.swift */; };
 		04FE667E1FF3C3D400EFBEC2 /* ConfirmationReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE667D1FF3C3D400EFBEC2 /* ConfirmationReservationViewController.xib */; };
 		04FE66811FF3C5C200EFBEC2 /* ConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE667F1FF3C5C200EFBEC2 /* ConfirmationTableViewCell.swift */; };
 		04FE66821FF3C5C200EFBEC2 /* ConfirmationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FE66801FF3C5C200EFBEC2 /* ConfirmationTableViewCell.xib */; };
-		04FE66851FF4D8A400EFBEC2 /* ListsOfObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE66841FF4D8A400EFBEC2 /* ListsOfObjects.swift */; };
 		B765B7A2004E312AA4E9881C /* Pods_TechCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBBC6E928B1605DD27B2F54 /* Pods_TechCodeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0428534F20177AF1000B8382 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
+		04306EB22013D6510038395C /* LogOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogOut.storyboard; sourceTree = "<group>"; };
+		04306EB42013D8460038395C /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		0452B62D200B83B40090764D /* ReservationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationList.swift; sourceTree = "<group>"; };
+		0452B62E200B83B40090764D /* ReservationList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationList.xib; sourceTree = "<group>"; };
+		0452B631200B89FE0090764D /* ReservationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationManager.swift; sourceTree = "<group>"; };
+		0452B633200C6DF00090764D /* ReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
+		0452B634200C6DF00090764D /* ReservationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCell.xib; sourceTree = "<group>"; };
 		046FEB6E1FEFAA8800EF0872 /* TechCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046FEB711FEFAA8800EF0872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046FEB761FEFAA8800EF0872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,14 +85,24 @@
 		04FD633E20022BB600490437 /* ReservationBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationBookingViewController.swift; sourceTree = "<group>"; };
 		04FD633F20022BB600490437 /* ReservationBookingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationBookingViewController.xib; sourceTree = "<group>"; };
 		04FD634220024E9C00490437 /* ReservationScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationScrollView.swift; sourceTree = "<group>"; };
-		04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewController.swift; sourceTree = "<group>"; };
+		04FD634420049DB900490437 /* MockObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjects.swift; sourceTree = "<group>"; };
+		04FD63462004E54000490437 /* ChooseRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseRoomViewController.xib; sourceTree = "<group>"; };
+		04FE653B2007657B00BE5145 /* menuList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = menuList.plist; sourceTree = "<group>"; };
+		04FE653D20079A2900BE5145 /* viewdeck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viewdeck.h; sourceTree = "<group>"; };
+		04FE653E200B4DD800BE5145 /* ShownMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShownMenuVC.swift; sourceTree = "<group>"; };
+		04FE6540200B4EC900BE5145 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		04FE6541200B4EC900BE5145 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		04FE6544200B558A00BE5145 /* TechCodeApp-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechCodeApp-Bridge.h"; sourceTree = "<group>"; };
+		04FE6545200B59CC00BE5145 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		04FE6547200B5D0300BE5145 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		04FE6549200B5D2E00BE5145 /* Creation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Creation.storyboard; sourceTree = "<group>"; };
+		04FE654B200B5D3E00BE5145 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		04FE66711FF25C6500EFBEC2 /* OldBookingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBookingTableViewController.swift; sourceTree = "<group>"; };
 		04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoomViewController.swift; sourceTree = "<group>"; };
-		04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCalendar.swift; sourceTree = "<group>"; };
 		04FE667B1FF3C1DA00EFBEC2 /* ConfirmationReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationReservationViewController.swift; sourceTree = "<group>"; };
 		04FE667D1FF3C3D400EFBEC2 /* ConfirmationReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationReservationViewController.xib; sourceTree = "<group>"; };
 		04FE667F1FF3C5C200EFBEC2 /* ConfirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		04FE66801FF3C5C200EFBEC2 /* ConfirmationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationTableViewCell.xib; sourceTree = "<group>"; };
-		04FE66841FF4D8A400EFBEC2 /* ListsOfObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsOfObjects.swift; sourceTree = "<group>"; };
 		3A0F6FCF92C3FFA062F6C969 /* Pods-TechCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechCodeApp/Pods-TechCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7DBBC6E928B1605DD27B2F54 /* Pods_TechCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A7D5B66BA9F88A7942A201 /* Pods-TechCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechCodeApp/Pods-TechCodeApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +150,8 @@
 				046FEB7A1FEFAA8800EF0872 /* LaunchScreen.storyboard */,
 				046FEB7D1FEFAA8800EF0872 /* Info.plist */,
 				04FD633C20021EE400490437 /* GoogleService-Info.plist */,
+				04FE653B2007657B00BE5145 /* menuList.plist */,
+				04FE653D20079A2900BE5145 /* viewdeck.h */,
 			);
 			path = TechCodeApp;
 			sourceTree = "<group>";
@@ -125,10 +161,13 @@
 			children = (
 				046FEB8E1FEFABCE00EF0872 /* Reservation.swift */,
 				046FEB901FEFABE900EF0872 /* Room.swift */,
+				0428534F20177AF1000B8382 /* RoomManager.swift */,
 				046FEB9A1FF0017300EF0872 /* User.swift */,
 				046FEB9C1FF0033200EF0872 /* Company.swift */,
 				04A2968E1FF1026D00BF9837 /* CompanyManager.swift */,
-				04FE66791FF2D25D00EFBEC2 /* BookingCalendar.swift */,
+				04FE6545200B59CC00BE5145 /* MenuItem.swift */,
+				04FD634420049DB900490437 /* MockObjects.swift */,
+				0452B631200B89FE0090764D /* ReservationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,10 +175,18 @@
 		046FEB841FEFAAA100EF0872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0452B62E200B83B40090764D /* ReservationList.xib */,
+				04FE6541200B4EC900BE5145 /* MenuViewController.xib */,
+				04FD633F20022BB600490437 /* ReservationBookingViewController.xib */,
 				046FEB971FEFDACA00EF0872 /* LoginViewController.xib */,
 				046FEB931FEFD6ED00EF0872 /* OldBookingViewController.xib */,
 				046FEB751FEFAA8800EF0872 /* Main.storyboard */,
+				04FE6547200B5D0300BE5145 /* Menu.storyboard */,
+				04FE6549200B5D2E00BE5145 /* Creation.storyboard */,
+				04FE654B200B5D3E00BE5145 /* List.storyboard */,
+				04306EB22013D6510038395C /* LogOut.storyboard */,
 				04FE667D1FF3C3D400EFBEC2 /* ConfirmationReservationViewController.xib */,
+				04FD63462004E54000490437 /* ChooseRoomViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,16 +194,19 @@
 		046FEB851FEFAAB200EF0872 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04FE66711FF25C6500EFBEC2 /* BookingTableViewController.swift */,
+				04FE6540200B4EC900BE5145 /* MenuViewController.swift */,
+				04FE66711FF25C6500EFBEC2 /* OldBookingTableViewController.swift */,
 				046FEB961FEFDACA00EF0872 /* LoginViewController.swift */,
 				046FEB921FEFD6ED00EF0872 /* OldBookingViewController.swift */,
 				046FEB881FEFAB3D00EF0872 /* BaseViewController.swift */,
 				04FE66731FF2883900EFBEC2 /* ChooseRoomViewController.swift */,
 				04FE667B1FF3C1DA00EFBEC2 /* ConfirmationReservationViewController.swift */,
-				04FE66841FF4D8A400EFBEC2 /* ListsOfObjects.swift */,
 				04FD633E20022BB600490437 /* ReservationBookingViewController.swift */,
-				04FD633F20022BB600490437 /* ReservationBookingViewController.xib */,
 				04FD634220024E9C00490437 /* ReservationScrollView.swift */,
+				04FE653E200B4DD800BE5145 /* ShownMenuVC.swift */,
+				04FE6544200B558A00BE5145 /* TechCodeApp-Bridge.h */,
+				0452B62D200B83B40090764D /* ReservationList.swift */,
+				04306EB42013D8460038395C /* LogOutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +218,8 @@
 				04FE66801FF3C5C200EFBEC2 /* ConfirmationTableViewCell.xib */,
 				04C9F8E61FF16EA9008B47B8 /* Cell1.swift */,
 				04C9F8E71FF16EA9008B47B8 /* Cell1.xib */,
+				0452B633200C6DF00090764D /* ReservationCell.swift */,
+				0452B634200C6DF00090764D /* ReservationCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -253,9 +305,18 @@
 			files = (
 				046FEB991FEFDACA00EF0872 /* LoginViewController.xib in Resources */,
 				046FEB7C1FEFAA8800EF0872 /* LaunchScreen.storyboard in Resources */,
+				0452B630200B83B40090764D /* ReservationList.xib in Resources */,
+				04FE654C200B5D3E00BE5145 /* List.storyboard in Resources */,
+				04FE6543200B4EC900BE5145 /* MenuViewController.xib in Resources */,
+				04FD63472004E54000490437 /* ChooseRoomViewController.xib in Resources */,
+				04306EB32013D6510038395C /* LogOut.storyboard in Resources */,
+				0452B636200C6DF00090764D /* ReservationCell.xib in Resources */,
 				04FD633D20021EE400490437 /* GoogleService-Info.plist in Resources */,
 				04FE66821FF3C5C200EFBEC2 /* ConfirmationTableViewCell.xib in Resources */,
+				04FE653C2007657B00BE5145 /* menuList.plist in Resources */,
+				04FE6548200B5D0300BE5145 /* Menu.storyboard in Resources */,
 				04FE667E1FF3C3D400EFBEC2 /* ConfirmationReservationViewController.xib in Resources */,
+				04FE654A200B5D2E00BE5145 /* Creation.storyboard in Resources */,
 				04FD634120022BB600490437 /* ReservationBookingViewController.xib in Resources */,
 				04C9F8E91FF16EA9008B47B8 /* Cell1.xib in Resources */,
 				046FEB951FEFD6ED00EF0872 /* OldBookingViewController.xib in Resources */,
@@ -293,14 +354,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TechCodeApp/Pods-TechCodeApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewDeck/ViewDeck.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewDeck.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -333,22 +400,29 @@
 			files = (
 				04FE667C1FF3C1DA00EFBEC2 /* ConfirmationReservationViewController.swift in Sources */,
 				04A2968F1FF1026D00BF9837 /* CompanyManager.swift in Sources */,
+				0452B62F200B83B40090764D /* ReservationList.swift in Sources */,
 				04FE66811FF3C5C200EFBEC2 /* ConfirmationTableViewCell.swift in Sources */,
 				04C9F8E81FF16EA9008B47B8 /* Cell1.swift in Sources */,
 				046FEB981FEFDACA00EF0872 /* LoginViewController.swift in Sources */,
-				04FE66721FF25C6500EFBEC2 /* BookingTableViewController.swift in Sources */,
-				04FE667A1FF2D25D00EFBEC2 /* BookingCalendar.swift in Sources */,
+				04FE66721FF25C6500EFBEC2 /* OldBookingTableViewController.swift in Sources */,
 				04FD634020022BB600490437 /* ReservationBookingViewController.swift in Sources */,
 				04FD634320024E9C00490437 /* ReservationScrollView.swift in Sources */,
 				046FEB891FEFAB3D00EF0872 /* BaseViewController.swift in Sources */,
 				046FEB8F1FEFABCE00EF0872 /* Reservation.swift in Sources */,
+				0428535020177AF1000B8382 /* RoomManager.swift in Sources */,
+				04FE6546200B59CC00BE5145 /* MenuItem.swift in Sources */,
+				04FE6542200B4EC900BE5145 /* MenuViewController.swift in Sources */,
 				04FE66741FF2883900EFBEC2 /* ChooseRoomViewController.swift in Sources */,
 				046FEB721FEFAA8800EF0872 /* AppDelegate.swift in Sources */,
 				046FEB941FEFD6ED00EF0872 /* OldBookingViewController.swift in Sources */,
+				04FE653F200B4DD800BE5145 /* ShownMenuVC.swift in Sources */,
+				0452B635200C6DF00090764D /* ReservationCell.swift in Sources */,
 				046FEB911FEFABE900EF0872 /* Room.swift in Sources */,
-				04FE66851FF4D8A400EFBEC2 /* ListsOfObjects.swift in Sources */,
 				046FEB9B1FF0017300EF0872 /* User.swift in Sources */,
+				0452B632200B89FE0090764D /* ReservationManager.swift in Sources */,
 				046FEB9D1FF0033200EF0872 /* Company.swift in Sources */,
+				04306EB52013D8460038395C /* LogOutViewController.swift in Sources */,
+				04FD634520049DB900490437 /* MockObjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

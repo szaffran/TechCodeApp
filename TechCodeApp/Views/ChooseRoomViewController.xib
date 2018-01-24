@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseRoomViewController" customModule="TechCodeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="cI2-gu-NwR" id="mFd-8Q-lle"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5qX-rp-EkU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-A0-8Ii">
+                    <rect key="frame" x="0.0" y="44" width="375" height="23.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-Fb-Gle">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Choose Room" id="udz-P1-E55">
+                            <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Aim-MJ-mFt">
+                                <connections>
+                                    <action selector="back:" destination="-1" id="yz0-Lb-toQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cI2-gu-NwR">
+                    <rect key="frame" x="0.0" y="67.5" width="375" height="599.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HKF-ap-sbT"/>
+                        <outlet property="delegate" destination="-1" id="lAA-E4-anU"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cI2-gu-NwR" firstAttribute="top" secondItem="D7X-A0-8Ii" secondAttribute="bottom" id="0FK-ET-ZQe"/>
+                <constraint firstItem="cI2-gu-NwR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7kR-fk-wzy"/>
+                <constraint firstItem="cI2-gu-NwR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="AMW-Wm-Ikf"/>
+                <constraint firstItem="bVu-Fb-Gle" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="BGo-lG-SNv"/>
+                <constraint firstItem="D7X-A0-8Ii" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fzz-4q-2N5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cI2-gu-NwR" secondAttribute="bottom" id="IOU-kL-0hV"/>
+                <constraint firstItem="D7X-A0-8Ii" firstAttribute="top" secondItem="bVu-Fb-Gle" secondAttribute="bottom" id="Luy-0g-ZZE"/>
+                <constraint firstItem="bVu-Fb-Gle" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bP9-uM-6Bx"/>
+                <constraint firstItem="D7X-A0-8Ii" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jv8-4m-nJ4"/>
+                <constraint firstItem="bVu-Fb-Gle" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="opb-VD-isA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="32.5" y="103.5"/>
+        </view>
+    </objects>
+</document>

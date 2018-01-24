@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationList" customModule="TechCodeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="FSg-Aq-4bN"/>
+                <outlet property="tableView" destination="3Cr-Yn-c2D" id="Vl3-iT-jZP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Cr-Yn-c2D">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2vZ-br-UJj"/>
+                        <outlet property="delegate" destination="-1" id="SfL-DG-k2S"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsm-gW-d5X">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="BlB-3C-lyO">
+                            <barButtonItem key="leftBarButtonItem" title="Menu" id="Tvx-I8-aEr">
+                                <connections>
+                                    <action selector="menu:" destination="-1" id="g0n-Gy-jCn"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3Cr-Yn-c2D" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4mf-bp-Aya"/>
+                <constraint firstItem="vsm-gW-d5X" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7IY-wz-XL3"/>
+                <constraint firstItem="3Cr-Yn-c2D" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Npv-I7-eq1"/>
+                <constraint firstItem="vsm-gW-d5X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R2M-5F-i53"/>
+                <constraint firstItem="vsm-gW-d5X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y3l-Sw-6fJ"/>
+                <constraint firstItem="3Cr-Yn-c2D" firstAttribute="top" secondItem="vsm-gW-d5X" secondAttribute="bottom" id="c52-Nj-TED"/>
+                <constraint firstItem="3Cr-Yn-c2D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yVI-B4-Klr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

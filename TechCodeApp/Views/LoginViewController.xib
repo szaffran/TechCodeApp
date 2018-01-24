@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="AuthenticateButton" destination="xgd-2x-Jgf" id="IQY-r0-fWQ"/>
                 <outlet property="mainView" destination="i5M-Pr-FkT" id="nwm-Lj-kEG"/>
+                <outlet property="password" destination="sO3-tW-H5g" id="j1g-aM-uyx"/>
                 <outlet property="txtViewLogin" destination="Hj4-hY-cmH" id="EHz-jd-aDW"/>
             </connections>
         </placeholder>

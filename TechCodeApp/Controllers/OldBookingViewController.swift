@@ -86,10 +86,7 @@ class OldBookingViewController: BaseViewController, UIPickerViewDelegate, UIPick
         }
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 
     @IBAction func companiesBoxBegin(_ sender: Any)
     {
