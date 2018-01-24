@@ -17,13 +17,14 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
     //if open for modify existing reservation, won't be nil
     var reservationToModify : Reservation? = nil
     
-    var today : Date = Date()
-    var selectedDate : Date =  Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-    
+   var today : Date = Date()
+//    var selectedDate : Date =  Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+//
     // will be modified each time we change the startTime for define a minimum value to endTime
     var minEndPicker = 0
     
-   
+ 
+  
     
     @IBOutlet weak var calendar: FSCalendar!
     
@@ -40,8 +41,8 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
-//    var hours: [String] = [String]()
-//    var minuts: [String] = [String]()
+    //    var hours: [String] = [String]()
+    //    var minuts: [String] = [String]()
     
     
     
@@ -88,18 +89,33 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
         
     }
     
-//    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-//        return ConfigurationParameters(startDate: startDate!, endDate: endDate!)
-//    }
-    func calendar(_ calendar: FSCalendar, didSelect cDate: Date, at monthPosition: FSCalendarMonthPosition) {
+    //    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+    //        return ConfigurationParameters(startDate: startDate!, endDate: endDate!)
+    //    }
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         //probleme date a verifier
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-        let mydate = dateFormatter.calendar.date(byAdding: .day, value: 1, to: cDate)
-        let strDate = dateFormatter.string(from: mydate!)
-        let date: Date = dateFormatter.date(from: strDate)!
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd-MM-yyyy"
+       // dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        //let mydate = dateFormatter.calendar.date(byAdding: .day, value: 1, to: cDate)
+        
+        // date at midnight
+        
+        
+       
+        let mydate : Date = Calendar.current.startOfDay(for: calendar.selectedDate!)
+        
+        let strDate = dateFormatter.string(from: mydate)
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        
+        let date: Date = dateFormatter.date(from: "\(strDate) 00:00")!
+
         self.reservation.date = date //Calendar.current.date(byAdding: .day, value: 1, to: date)!
     }
     
@@ -119,26 +135,26 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
     }
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
-       
+        
         self.calendar.select(reservationToModify?.date)
     }
     
-//    func initHours ()
-//    {
-//        for index in 1...24 {
-//            self.hours.append(String(index))
-//
-//        }
-//        for index in 1...60 {
-//            self.minuts.append(String(index))
-//        }
-//    }
+    //    func initHours ()
+    //    {
+    //        for index in 1...24 {
+    //            self.hours.append(String(index))
+    //
+    //        }
+    //        for index in 1...60 {
+    //            self.minuts.append(String(index))
+    //        }
+    //    }
     
     func initView(){
         self.reservation = Reservation()
         self.labelStart.text = "00 : 00"
         self.labelEnd.text = "00 : 00"
-    
+        
     }
     
     //if edit mode, uodate the picker to reservation value
@@ -147,6 +163,8 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
         let dateChekIn =  self.reservationToModify!.checkIn
         let dateChekOut =  self.reservationToModify!.checkout
         let dateFormatter = DateFormatter()
+        
+        dateFormatter.timeZone = TimeZone.current
         
         dateFormatter.dateFormat = "HH"
         let hourStart = dateFormatter.string(from: dateChekIn)
@@ -160,8 +178,8 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
         let intHourStart : Int = Int(hourStart)!
         let intHourEnd : Int = Int(hourEnd)!
         
-      
-         self.picker.selectRow(intHourStart, inComponent: 0, animated: true)
+        
+        self.picker.selectRow(intHourStart, inComponent: 0, animated: true)
         self.picker.selectRow(1, inComponent: 1, animated: true)
         
         self.endPicker.selectRow(intHourEnd, inComponent: 0, animated: true)
@@ -210,7 +228,7 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
             let temp =  self.reservation.date
             
             let dateFormatter = DateFormatter()
-            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+            dateFormatter.timeZone = TimeZone.current
             
             dateFormatter.dateFormat = "dd-MM-yyyy"
             let strDate = dateFormatter.string(from: temp)
@@ -219,7 +237,7 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
             dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
             let date: Date = dateFormatter.date(from: dateString)!
             
-           // self.reservation.date = date
+            // self.reservation.date = date
             self.reservation.checkIn = date
             
             self.endPicker.selectRow(row, inComponent: component, animated: true)
@@ -235,43 +253,43 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
         else if( pickerView == self.endPicker )
         {
             
-//            let validTime = Int(hour+minute)! > self.minEndPicker
-//
-            //            if(validTime ){
-            self.labelEnd.text = "\(hour) : \(minute)"
-            
-            let temp =  self.reservation.date
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-            
-            dateFormatter.dateFormat = "dd-MM-yyyy"
-            let strDate = dateFormatter.string(from: temp)
-            let dateString = "\(strDate) \(hour):\(minute)"
-            
-            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
-            let date: Date = dateFormatter.date(from: dateString)!
-            
-            self.reservation.checkout = date
-            print(date)
-            //            }
-            //            else{
+            let validTime = Int(hour+minute)! > self.minEndPicker
             //
-            //                guard let hour : String = self.pickerView(self.picker, titleForRow: self.picker.selectedRow(inComponent: 0), forComponent: 0) else
-            //                {
-//                    return
-//                }
-//
-//                guard let minute : String = self.pickerView(self.picker, titleForRow: self.picker.selectedRow(inComponent: 1), forComponent: 1) else
-//                {
-//                    return
-//                }
-//                 self.endPicker.selectRow(self.picker.selectedRow(inComponent: 0), inComponent: 0, animated: true)
-//                self.endPicker.selectRow(self.picker.selectedRow(inComponent: 1), inComponent: 1, animated: true)
-//                 self.labelEnd.text = "\(hour) : \(minute)"
-//            }
+            if(validTime ){
+                self.labelEnd.text = "\(hour) : \(minute)"
+                
+                let temp =  self.reservation.date
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.timeZone = TimeZone.current
+                
+                dateFormatter.dateFormat = "dd-MM-yyyy"
+                let strDate = dateFormatter.string(from: temp)
+                let dateString = "\(strDate) \(hour):\(minute)"
+                
+                dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+                let date: Date = dateFormatter.date(from: dateString)!
+                
+                self.reservation.checkout = date
+                print(date)
+            }
+            else{
+                
+                guard let hour : String = self.pickerView(self.picker, titleForRow: self.picker.selectedRow(inComponent: 0), forComponent: 0) else
+                {
+                    return
+                }
+                
+                guard let minute : String = self.pickerView(self.picker, titleForRow: self.picker.selectedRow(inComponent: 1), forComponent: 1) else
+                {
+                    return
+                }
+                self.endPicker.selectRow(self.picker.selectedRow(inComponent: 0), inComponent: 0, animated: true)
+                self.endPicker.selectRow(self.picker.selectedRow(inComponent: 1), inComponent: 1, animated: true)
+                self.labelEnd.text = "\(hour) : \(minute)"
+            }
             
-
+            
         }
         
     }
@@ -300,7 +318,7 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
             return ""
         }
     }
-
+    
     
     @IBAction override func menu(_ sender: Any)
     {
@@ -318,13 +336,13 @@ class ReservationBookingViewController: BaseViewController, UIPickerViewDelegate
         performSegue(withIdentifier: "chooseRoomSegue", sender: nil)
         
     }
-   
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "chooseRoomSegue" {
             if let destination = segue.destination as? ChooseRoomViewController {
                 
                 destination.reservation = self.reservation
-                 destination.updateReservationDelegate = self.updateReservationDelegate
+                destination.updateReservationDelegate = self.updateReservationDelegate
                 
             }
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0428535020177AF1000B8382 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428534F20177AF1000B8382 /* RoomManager.swift */; };
+		042853542018A864000B8382 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 042853532018A864000B8382 /* NSDate+Extensions.m */; };
 		04306EB32013D6510038395C /* LogOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04306EB22013D6510038395C /* LogOut.storyboard */; };
 		04306EB52013D8460038395C /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04306EB42013D8460038395C /* LogOutViewController.swift */; };
 		0452B62F200B83B40090764D /* ReservationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B62D200B83B40090764D /* ReservationList.swift */; };
@@ -56,6 +57,9 @@
 
 /* Begin PBXFileReference section */
 		0428534F20177AF1000B8382 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
+		042853512018A864000B8382 /* TechCodeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechCodeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		042853522018A864000B8382 /* NSDate+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		042853532018A864000B8382 /* NSDate+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
 		04306EB22013D6510038395C /* LogOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogOut.storyboard; sourceTree = "<group>"; };
 		04306EB42013D8460038395C /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		0452B62D200B83B40090764D /* ReservationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationList.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				046FEB711FEFAA8800EF0872 /* AppDelegate.swift */,
+				042853522018A864000B8382 /* NSDate+Extensions.h */,
+				042853532018A864000B8382 /* NSDate+Extensions.m */,
 				046FEB851FEFAAB200EF0872 /* Controllers */,
 				046FEB841FEFAAA100EF0872 /* Views */,
 				046FEB831FEFAA9A00EF0872 /* Models */,
@@ -152,6 +158,7 @@
 				04FD633C20021EE400490437 /* GoogleService-Info.plist */,
 				04FE653B2007657B00BE5145 /* menuList.plist */,
 				04FE653D20079A2900BE5145 /* viewdeck.h */,
+				042853512018A864000B8382 /* TechCodeApp-Bridging-Header.h */,
 			);
 			path = TechCodeApp;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 				TargetAttributes = {
 					046FEB6D1FEFAA8800EF0872 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -416,6 +424,7 @@
 				046FEB721FEFAA8800EF0872 /* AppDelegate.swift in Sources */,
 				046FEB941FEFD6ED00EF0872 /* OldBookingViewController.swift in Sources */,
 				04FE653F200B4DD800BE5145 /* ShownMenuVC.swift in Sources */,
+				042853542018A864000B8382 /* NSDate+Extensions.m in Sources */,
 				0452B635200C6DF00090764D /* ReservationCell.swift in Sources */,
 				046FEB911FEFABE900EF0872 /* Room.swift in Sources */,
 				046FEB9B1FF0017300EF0872 /* User.swift in Sources */,
@@ -560,6 +569,7 @@
 			baseConfigurationReference = 3A0F6FCF92C3FFA062F6C969 /* Pods-TechCodeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TechCodeApp/Info.plist;
@@ -567,6 +577,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "developers-institute.TechCodeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TechCodeApp/TechCodeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,6 +589,7 @@
 			baseConfigurationReference = 90A7D5B66BA9F88A7942A201 /* Pods-TechCodeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TechCodeApp/Info.plist;
@@ -584,6 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "developers-institute.TechCodeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TechCodeApp/TechCodeApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
