@@ -11,13 +11,6 @@ import Foundation
 import Firebase
 
 
-//perform an inclusive range in between date check.
-extension NSDate {
-    func isBetweeen(date date1: NSDate, andDate date2: NSDate) -> Bool {
-        return date1.compare(self as Date) == self.compare(date2 as Date)
-    }
-}
-
 
 
 class Room
@@ -69,7 +62,6 @@ class Room
         }
         
         
-        
     }
     
     init( roomId : String, roomName : String,  capacities : Int,  facilities : [String] , roomNumber : Int, floorNumber : Int,imageName : String, image : UIImage? ){
@@ -88,6 +80,11 @@ class Room
     func addReservation(reservation : Reservation){
         self.reservations.append(reservation)
         reservation.updateDataBase(to: .room)
+    }
+    func updateReservation(reservation : Reservation, index : Int){
+        reservations[index] = reservation
+        reservation.updateDataBase(to: .room)
+        
     }
     
     func getReservations() -> [Reservation]{
@@ -116,35 +113,46 @@ class Room
      func getReservationsFromFirebase()
     {
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        Database.database().reference().child("rooms").child(uid).child("reservations").observeSingleEvent(of: .value) { (snapshot) in
+        Database.database().reference().child("rooms").child(roomId).child("reservations").observeSingleEvent(of: .value) { (snapshot) in
             print("snapshot")
             print(snapshot)
             
-            if let dictionary = snapshot.value as? Dictionary<String,Any>{
-                for item in dictionary{
+            if let reservationsDic = snapshot.value as? Dictionary<String,Any>{
+                
+                for reservation in reservationsDic{
                     
-                    self.reservations.append(Reservation(dict: item.value as! Dictionary<String, Any>))
                     print()
+                    
+                        var x = reservation.value as! Dictionary<String, Any>
+                        self.reservations.append(Reservation(dict: reservation.value as! Dictionary<String, Any>))
+                        print()
+                    
                 }
             }
         }
     }
     
-    
-    
     func occupiedRoom(newReservation : Reservation) -> Bool {
-        let startDateNewReservation = newReservation.checkIn as NSDate
-        let endDateNewReservation = newReservation.checkout as NSDate
         
-        for reservation in reservations{
-            
-            let startTime = reservation.checkIn as NSDate
-            
-            if( startDateNewReservation.isBetweeen(date: reservation.checkIn as NSDate, andDate:  reservation.checkout as NSDate) || endDateNewReservation.isBetweeen(date: reservation.checkIn as NSDate, andDate:  reservation.checkout as NSDate) ||  startTime.isBetweeen(date: startDateNewReservation, andDate:  endDateNewReservation))
+        //let dateNewReservation = newReservation.date
+        let startTimeNewReservation = newReservation.checkIn
+        let endTimeNewReservation = newReservation.checkout
+        
+        
+        if let filteredList : [Reservation] = self.reservations.filter({$0.date == newReservation.date})
+        {
+            for reservation in filteredList
             {
-                return false
+                
+                if ( newReservation.checkIn.isBetweeen(startTime : reservation.checkIn, EndTime : reservation.checkout)
+                    || newReservation.checkout.isBetweeen(startTime : reservation.checkIn, EndTime : reservation.checkout)
+                    || reservation.checkIn.isBetweeen(startTime : newReservation.checkIn, EndTime : newReservation.checkout))
+                {
+                    return false
+                }
             }
+            return true
         }
-         return true
     }
 }
+

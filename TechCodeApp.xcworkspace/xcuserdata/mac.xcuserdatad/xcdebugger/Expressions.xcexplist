@@ -3,7 +3,31 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in LoginViewController.handleLogin():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "RoomManager.sharedInstance.rooms">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Room.getReservationsFromFirebase():Room.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "snapshot">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in CompanyManager.getReservationFromFirebase():CompanyManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Reservation.getRoomById(id:):Reservation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "RoomManager.sharedInstance.rooms">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in LoginViewController.handleLogin():LoginViewController.swift">
@@ -13,20 +37,6 @@
             </PersistentString>
             <PersistentString
                value = "CompanyManager.sharedInstance.company!.id">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ReservationBookingViewController.pickerView(_:didSelectRow:inComponent:):ReservationBookingViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "components.date!">
-            </PersistentString>
-            <PersistentString
-               value = "components.hour">
-            </PersistentString>
-            <PersistentString
-               value = "date">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -69,10 +79,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Reservation.getRoomById(id:):Reservation.swift">
+         contextName = "closure #1 in RoomManager.getRoomsFromFirebase(completion:):RoomManager.swift">
          <PersistentStrings>
             <PersistentString
-               value = "RoomManager.sharedInstance.rooms">
+               value = "item.value as! Dictionary&lt;String, Any&gt;">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,10 +90,24 @@
          contextName = "ReservationBookingViewController.viewDidLoad():ReservationBookingViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #1 in RoomManager.getRoomsFromFirebase(completion:):RoomManager.swift">
+         contextName = "closure #1 in Room.getReservationsFromFirebase():Room.swift">
          <PersistentStrings>
             <PersistentString
-               value = "item.value as! Dictionary&lt;String, Any&gt;">
+               value = "item.value as! as? Dictionary&lt;String,Any&gt;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReservationBookingViewController.pickerView(_:didSelectRow:inComponent:):ReservationBookingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "components.date!">
+            </PersistentString>
+            <PersistentString
+               value = "components.hour">
+            </PersistentString>
+            <PersistentString
+               value = "date">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -112,7 +136,13 @@
             <PersistentString
                value = "&quot;\(sharedDateStr) \(checkInStr)&quot;">
             </PersistentString>
+            <PersistentString
+               value = "dict[&quot;checkIn&quot;] as! String ">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Room.occupiedRoom(newReservation:):Room.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

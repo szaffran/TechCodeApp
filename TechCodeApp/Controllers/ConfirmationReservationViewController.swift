@@ -46,9 +46,9 @@ class ConfirmationReservationViewController: BaseViewController, UITableViewDele
         timeFormatter.timeStyle = .short
         dateFormatter.dateStyle = .medium
         
-        self.date =  dateFormatter.string(from: reservation.date)
-        self.startTime = timeFormatter.string(from: reservation.checkIn)
-        self.endTime = timeFormatter.string(from:  reservation.checkout)
+        self.date =  reservation.date
+        self.startTime = reservation.checkIn
+        self.endTime = reservation.checkout
     }
 
     
@@ -65,6 +65,7 @@ class ConfirmationReservationViewController: BaseViewController, UITableViewDele
         else{
             self.reservation.mode = reservationMode.edit
             CompanyManager.sharedInstance.company?.addReservation(reservation: self.reservation)
+            reservation.room.addReservation(reservation: reservation)
         }
         
         

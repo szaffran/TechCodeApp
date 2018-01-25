@@ -57,7 +57,7 @@ class ChooseRoomViewController: BaseViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let selectedRow = RoomManager.sharedInstance.rooms[indexPath.row]
+        let selectedRow = unoccupedRooms[indexPath.row]
         
         performSegue(withIdentifier: "confirmationSegue", sender: selectedRow)
         

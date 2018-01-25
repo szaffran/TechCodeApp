@@ -74,7 +74,12 @@ class LoginViewController: BaseViewController , protDelegate {
                 //CompanyManager.sharedInstance.company!.updateDataBase()
                 RoomManager.sharedInstance.getRoomsFromFirebase{ () in
                     
+                    print(RoomManager.sharedInstance.rooms)
+                    
                     CompanyManager.sharedInstance.getReservationFromFirebase { () in
+                        
+                        print(CompanyManager.sharedInstance.company?.reservations)
+                        
                         self?.performSegue(withIdentifier: "userLoginSegue", sender: nil)
                     }
                 }

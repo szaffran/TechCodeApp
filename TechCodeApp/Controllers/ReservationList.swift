@@ -41,13 +41,12 @@ class ReservationList: BaseViewController,UITableViewDelegate,UITableViewDataSou
         super.viewDidLoad()
         //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.register(UINib(nibName: "ReservationCell", bundle: Bundle.main), forCellReuseIdentifier: "myCell")
-        // Do any additional setup after loading the view.
+     
     }
     
     // reload data when has been reservation modified
     override func  viewWillAppear(_ animated: Bool) {
-        
-         myReservations = CompanyManager.sharedInstance.company!.getReservations()
+        myReservations = CompanyManager.sharedInstance.company!.getReservations()
         super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
@@ -93,11 +92,12 @@ class ReservationList: BaseViewController,UITableViewDelegate,UITableViewDataSou
     func updateReservation(reservation: Reservation) {
         
         CompanyManager.sharedInstance.company!.updateReservation(reservation: reservation, index: indexOfCellToModify)
+        //RoomManager.sharedInstance.
+        print()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination: ReservationBookingViewController = segue.destination as? ReservationBookingViewController {
-            //myReservations[sender as! Int].mode = reservationMode.edit
             destination.reservationToModify = myReservations[sender as! Int]
             destination.updateReservationDelegate = self
         }

@@ -26,7 +26,7 @@ class CompanyManager: NSObject
             print("snapshot")
             print(snapshot)
             
-            if let dictionary = snapshot.value as? Dictionary<String,Any>{
+            if let dictionary = snapshot.value as? Dictionary<String,Any>  {
                 for item in dictionary{
                     
                     self.company?.reservations.append(Reservation(dict: item.value as! Dictionary<String, Any>))
@@ -34,7 +34,12 @@ class CompanyManager: NSObject
                 }
                 completion()
             }
+            else{
+                completion()
+                
+            }
             
+          
         }
     }
 }

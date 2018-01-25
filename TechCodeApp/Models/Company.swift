@@ -55,11 +55,13 @@ class Company: NSObject
     }
     
     func addReservation(reservation : Reservation){
-        reservations.append(reservation)
         reservation.updateDataBase(to: .company)
+        reservations.append(reservation)
     }
     func updateReservation(reservation : Reservation, index : Int){
         reservations[index] = reservation
+        reservation.updateDataBase(to: .company)
+        
     }
     func getReservations() -> [Reservation]{
         return self.reservations

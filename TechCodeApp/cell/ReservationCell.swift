@@ -33,8 +33,9 @@ class ReservationCell: UITableViewCell {
         
         
         self.img.image = reservation.room.image
-        self.start.text = "reservation validate on : \(dateFormatter.string(from: reservation.checkIn))"
-        self.end.text = "from : \( timeFormatter.string(from: reservation.checkIn))  to : \( timeFormatter.string(from: reservation.checkout))"
+        //self.start.text = "reservation validate on : \(dateFormatter.string(from: reservation.checkIn))"
+        self.start.text = "reservation validate on : \(reservation.date)"
+        self.end.text = "from : \( reservation.checkIn)  to : \(reservation.checkout)"
         self.roomName.text = "at th room : \(reservation.room.roomName)"
         
     }

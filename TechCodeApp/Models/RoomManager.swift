@@ -29,8 +29,9 @@ class RoomManager: NSObject {
             if let dictionary = snapshot.value as? Dictionary<String,Any>{
                 for item in dictionary{
                     let room = Room(dict: item.value as! Dictionary<String, Any>)
+                    //room.roomId = item.key
+                    room.getReservationsFromFirebase()
                     self.rooms.append(room)
-                    print()
                 }
                 completion()
             }
